@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- http://schemas.android.com/apk/res/android -->
+<ScrollView
+     	xmlns:android="http://schemas.android.com/apk/res/android"
+   		android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    >
+    
+    
+	<LinearLayout
+   		xmlns:android="http://schemas.android.com/apk/res/android"
+   		android:orientation="vertical"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+	    >
+	    <!-- Сумма кредита -->
+		<TextView 
+		    android:id="@+id/amountLabel"
+		    android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:text="Amount:"
+		    />
+		
+		<EditText 
+		    android:id="@+id/amountInput"
+		    android:layout_width="fill_parent"
+			android:layout_height="wrap_content"	    
+		    android:inputType="numberDecimal"
+		    />
+		
+		<!-- Срок кредита -->	
+		<TextView 
+		    android:id="@+id/creditTermLabel"
+		    android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:text="Credit term:"
+		    />
+		
+		<EditText 
+		    android:id="@+id/creditTermInput"
+		    android:layout_width="fill_parent"
+			android:layout_height="wrap_content"	    
+		    android:inputType="number"
+		    />
+		
+		
+		<!-- Процентная ставка -->	
+		<TextView 
+		    android:id="@+id/interestRateLabel"
+		    android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:text="Interest rate:"
+		    />
+		
+		<EditText 
+		    android:id="@+id/interestRateInput"
+		    android:layout_width="fill_parent"
+			android:layout_height="wrap_content"	    
+		    android:inputType="numberDecimal"
+		    />
+		
+		<!-- Начальный платёж -->	
+		<TextView 
+		    android:id="@+id/initialPaymentLabel"
+		    android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:text="Initial pay:"
+		    />
+		
+		<EditText 
+		    android:id="@+id/initialPaymentInput"
+		    android:layout_width="fill_parent"
+			android:layout_height="wrap_content"	    
+		    android:inputType="numberDecimal"
+		    />
+		
+		<!-- Месячный платёж -->	
+		<TextView 
+		    android:id="@+id/monthlyPaymentLabel"
+		    android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:text="Monthly pay:"
+		    />
+		
+		<EditText 
+		    android:id="@+id/monthlyPaymentInput"
+		    android:layout_width="fill_parent"
+			android:layout_height="wrap_content"	    
+		    android:inputType="numberDecimal"
+		    />
+		
+		<!-- Квартальный платёж -->	
+		<TextView 
+		    android:id="@+id/quarterlyPaymentLabel"
+		    android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:text="Quarterly pay:"
+		    />
+		
+		<EditText 
+		    android:id="@+id/quarterlyPaymentInput"
+		    android:layout_width="fill_parent"
+			android:layout_height="wrap_content"	    
+		    android:inputType="numberDecimal"
+		    />
+		
+		<!-- Годовой платёж -->	
+		<TextView 
+		    android:id="@+id/annualPaymentLabel"
+		    android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:text="Annual pay:"
+		    />
+		
+		<EditText 
+		    android:id="@+id/annualPaymentInput"
+		    android:layout_width="fill_parent"
+			android:layout_height="wrap_content"	    
+		    android:inputType="numberDecimal"
+		    />
+	
+		
+		<Button 
+		    android:id="@+id/completeButton"
+		  	android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 
+			android:layout_marginTop="10dp" 
+			android:layout_marginBottom="15dp"
+		    android:text="Calculate"
+		    android:onClick="onCalculateClick"
+		    />
+	</LinearLayout>
+    
+</ScrollView>
+	

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- TODO: нужны ли сумма и срок кредита тут? -->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrool"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/background"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        >
+        
+        <TextView 
+            android:id="@+id/irrLabel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:text="IRR: {}%"
+            />
+        
+        <!-- Название банка -->
+        <TextView 
+            android:id="@+id/bankNameLabel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/irrLabel"
+            android:text="Bank name:"
+            />
+        
+        <EditText 
+            android:id="@+id/bankNameInput"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:layout_below="@id/bankNameLabel"
+            />
+        
+        <!-- Название кредита -->
+        <TextView 
+            android:id="@+id/creditNameLabel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bankNameInput"
+            android:text="Credit name:"
+            />
+        
+        <EditText 
+            android:id="@+id/creditNameInput"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:layout_below="@id/creditNameLabel"
+            />        
+        
+        <!-- Коментарии к кредиту -->
+        <TextView 
+            android:id="@+id/commentLabel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/creditNameInput"
+            android:text="Comment:"
+            />
+        
+        <EditText 
+            android:id="@+id/commentInput"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="false"
+            android:lines="6"
+            android:scrollbars="vertical"
+            
+            android:layout_below="@id/commentLabel"
+            />
+        
+        <!-- Кнопка сохранить -->
+        <Button 
+            android:id="@+id/saveButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/commentInput"
+            android:text="Save"
+            
+            android:onClick="onSaveClick"
+            />
+        
+        <!-- Кнопка "отменить" -->
+        <Button 
+            android:id="@+id/cancelButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/saveButton"
+            android:text="Cancel"
+            
+            android:onClick="onCancelClick"
+            />
+    </RelativeLayout>
+    
+    
+</ScrollView>

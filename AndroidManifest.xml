@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ru.totem3006"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="10" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        
+        <activity
+            android:name=".Menu"
+            android:label="@string/menu_label" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        
+        <activity 
+            android:name=".Calculate"
+            android:label="@string/calculate_label"
+            >
+              
+        </activity>
+        
+        
+        <activity 
+            android:name=".ResultOutput"
+            android:label="@string/result_label"
+            >
+            
+        </activity>
+        
+        
+        <activity
+            android:name=".SaveScreen"
+            android:label="@string/save_label"
+            >
+            
+        </activity>
+        
+        <activity 
+            android:name=".LoadPage"
+            android:label="Load"
+            >
+            
+        </activity>
+        
+       
+    </application>
+
+    
+</manifest>

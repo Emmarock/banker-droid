@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, Menu!</string>
+    <string name="app_name">Banker</string>
+	<string name="menu_label">Menu</string>
+	<string name="calculate_label">Calculate</string>
+	<string name="result_label">Result Output</string>
+	<string name="save_label">Save result</string>
+	
+	<string name="menu_irr">Calculate IRR</string>
+	<string name="menu_load">Load</string>
+	
+</resources>

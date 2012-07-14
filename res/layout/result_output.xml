@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Экран вывода результата.
+Тут будут:
+1) Вывод IRR
+2) предложение сохранить
+3) переход в меню
+ -->
+<!-- Промотка экрана -->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+   	android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/Scroll"
+    >
+    <!-- Фон -->
+    <RelativeLayout
+        android:id="@+id/Background"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+        >
+        
+        <TextView 
+            android:id="@+id/irrOutput"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:text="IRR: {}%"
+            />
+        
+        <Button 
+            android:id="@+id/saveButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/irrOutput"
+            android:text="Save result"
+            
+            android:onClick="onSaveClick"
+            />
+        <Button 
+            android:id="@+id/closeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/saveButton"
+            android:text="Close"
+            
+            android:onClick="onCloseClick"
+            />
+    </RelativeLayout>
+    
+    
+</ScrollView>
