@@ -1,5 +1,8 @@
 package ru.totem3006;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.util.ArrayList;
 
 import ru.totem3006.dataSaver.IrrRecord;
@@ -8,6 +11,8 @@ import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Environment;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -42,14 +47,6 @@ public class LoadPage extends Activity
         }
         TextView tw = (TextView) findViewById(R.id.load0);
         tw.setText(tmp);
-        /*
-        // выводим даннные
-        String list_arr[]={"Апельсин","Банан","Яблоко","Груша"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.load_page, R.id.load0, list_arr);
-        
-        ListView list = (ListView) findViewById(R.id.load0);
-        list.setAdapter(adapter);
-        */
     }
    
     
@@ -59,5 +56,40 @@ public class LoadPage extends Activity
     	finish();
     	Intent intent = new Intent(this, Menu.class);
     	startActivity(intent);
+    }
+    
+    public void onCleanClick(View v)
+    {
+    	//очищаем файл сохранения и перезагружаем старницу
+    	String folderToSave = Environment.getExternalStorageDirectory().toString();
+		File file = new File(folderToSave, IrrSaver.FILE_NAME);
+		FileOutputStream fos = null;
+		try
+		{
+			String emptyStr = "";
+			fos = new FileOutputStream(file);
+			fos.write(emptyStr.getBytes());
+		}
+		catch (Exception e)
+		{
+			Log.e("onCleanClick", e.getMessage());
+		}
+		finally
+		{
+			try
+			{
+				fos.close();
+				
+				finish();
+		    	Intent intent = new Intent(this, LoadPage.class);
+		    	startActivity(intent);
+			}
+			catch (Exception e)
+			{
+				//pass
+			}
+		}
+		
+		
     }
 }
