@@ -124,8 +124,8 @@ public class CountIRR {
         //System.out.println('\n'+"IRR "+((Up + Down)/2));
         //std::cout << '\n' << "IRR  " <<(irr.Up + irr.Down)/2;
 
-
-    return (Up + Down)/2;
+        //12 потому что Дау Сказал что Расчетный Период это Год
+        return 12*(Up + Down)/2;
     }
 
 	
